@@ -789,7 +789,7 @@ async def ytplay(_, message: Message):
             f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
         )
         return
-    await lel.edit("__searching.....__)
+    await lel.edit("__searching.....__")
     user_id = message.from_user.id
     user_name = message.from_user.first_name
      
