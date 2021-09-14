@@ -683,7 +683,7 @@ async def play(_, message: Message):
                         InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                         InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                     ],
-                    [InlineKeyboard Button(text="❌ Close", callback_data="cls")],
+                    [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
                     [InlineKeyboardButton(text="Support 💫", url=f"https://t.me/ShokoSupports")],
                 ]
             )
