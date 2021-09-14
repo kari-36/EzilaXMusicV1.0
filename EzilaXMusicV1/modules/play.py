@@ -514,7 +514,7 @@ async def play(_, message: Message):
         )
         return
     text_links=None
-    await lel.edit("__Finding.....__")
+    await lel.edit("__Searching.....__")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -567,7 +567,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("__Sending....__")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -611,7 +611,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("__sending......__")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
@@ -735,7 +735,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("__Processing.....__")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -789,7 +789,7 @@ async def ytplay(_, message: Message):
             f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
         )
         return
-    await lel.edit("🔎 **Finding**")
+    await lel.edit("__searching.....__)
     user_id = message.from_user.id
     user_name = message.from_user.first_name
      
@@ -798,7 +798,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎵 **Processing**")
+    await lel.edit("__sending....__")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -829,9 +829,9 @@ async def ytplay(_, message: Message):
             ],
             [
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-            ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                InlineKeyboardButton(text="🗑Close", callback_data="cls"),
+                ],
+                [InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="Shokosupports")],
         ]
     )
     requested_by = message.from_user.first_name
@@ -882,7 +882,7 @@ async def deezer(client: Client, message_: Message):
     if message_.chat.id in DISABLED_GROUPS:
         return
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("__Sending....__")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -1020,7 +1020,7 @@ async def jiosaavn(client: Client, message_: Message):
     global que
     if message_.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("__Sending.....__")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -1214,9 +1214,9 @@ async def lol_cb(b, cb):
             ],
             [
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-            ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                InlineKeyboardButton(text="🗑Close", callback_data="cls"),
+                ],
+                [InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="Shokosupports")],
         ]
     )
     requested_by = useer_name
