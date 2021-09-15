@@ -681,7 +681,7 @@ async def play(_, message: Message):
                     ],
                     [
                         InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                        InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                        InlineKeyboardButton(text="Download 📥", callback_data="cls"),
                     ],
                     [InlineKeyboardButton(text="💫 Support 💫", url=f"https://t.me/ShokoSupports")],
                     [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
@@ -830,7 +830,7 @@ async def ytplay(_, message: Message):
             ],
             [
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                InlineKeyboardButton(text="Download 📥", callback_data="cls"),
             ],
             [InlineKeyboardButton(text="💫 Support 💫", url=f"https://t.me/ShokoSupports")],
                     [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
@@ -1177,7 +1177,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("You ain't the person who requested to play the song!", show_alert=True)
         return
-    await cb.message.edit("Hang On... Player Starting")
+    await cb.message.edit("__Hang On... Player Starting__")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
@@ -1216,7 +1216,7 @@ async def lol_cb(b, cb):
             ],
             [
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                InlineKeyboardButton(text="Download 📥", callback_data="cls"),
             ],
             [InlineKeyboardButton(text="💫 Support 💫", url=f"https://t.me/ShokoSupports")],
             [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
