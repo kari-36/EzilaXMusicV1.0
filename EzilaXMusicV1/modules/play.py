@@ -681,10 +681,9 @@ async def play(_, message: Message):
                     ],
                     [
                         InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                        InlineKeyboardButton(text="Download 📥", callback_data="cls"),
+                        InlineKeyboardButton(text="🗑 Close", callback_data="cls"),
                     ],
-                    [InlineKeyboardButton(text="💫 Support 💫", url=f"https://t.me/ShokoSupports")],
-                    [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                    [InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/ShokoSupports")],
                 ]
             )
             requested_by = message.from_user.first_name
@@ -830,10 +829,9 @@ async def ytplay(_, message: Message):
             ],
             [
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", callback_data="cls"),
+                InlineKeyboardButton(text="🗑 Close", callback_data="cls"),
             ],
-            [InlineKeyboardButton(text="💫 Support 💫", url=f"https://t.me/ShokoSupports")],
-                    [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/ShokoSupports")],
         ]
     )
     requested_by = message.from_user.first_name
@@ -1216,10 +1214,9 @@ async def lol_cb(b, cb):
             ],
             [
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", callback_data="cls"),
+                InlineKeyboardButton(text="🗑 Close", callback_data="cls"),
             ],
-            [InlineKeyboardButton(text="💫 Support 💫", url=f"https://t.me/ShokoSupports")],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/ShokoSupports")],
         ]
     )
     requested_by = useer_name
