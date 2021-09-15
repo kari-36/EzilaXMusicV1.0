@@ -459,7 +459,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("__Processing....__")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -514,7 +514,7 @@ async def play(_, message: Message):
         )
         return
     text_links=None
-    await lel.edit("🔎 **Finding**")
+    await lel.edit("__Searching....__")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -611,7 +611,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("__Processing__")
+        await lel.edit("__Sending...__")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
